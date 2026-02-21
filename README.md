@@ -12,9 +12,9 @@
 
 **GlowUp** adalah aplikasi mobile berbasis Flutter yang dibuat untuk membantu mencatat dan mengatur produk kosmetik dalam bentuk _checklist_.
 
-Di aplikasi ini, pengguna bisa menambahkan produk kosmetik yang dimiliki, lalu menandainya dengan _checkbox_ untuk menunjukkan apakah produk tersebut masih ada atau tidak. Jadi bukan cuma daftar biasa, tapi benar-benar bisa dipantau statusnya. Selain itu, pengguna juga bisa mengedit data produk kalau ada yang salah atau ingin diperbarui, serta menghapus produk yang sudah tidak dipakai.
+Di aplikasi ini, pengguna bisa menambahkan produk kosmetik yang dimiliki, lalu menandainya dengan _checkbox_ sebagai penanda status produk. Ketika produk dicentang, tampilannya akan berubah warna sebagai indikator bahwa produk tersebut sudah ditandai. Selain itu, pengguna juga bisa mengedit data produk jika ada kesalahan atau ingin diperbarui, serta menghapus produk yang sudah tidak digunakan.
 
-Aplikasi ini dibuat dengan menerapkan fitur _Create_, _Read_, _Delete_, serta nilai tambah berupa _Update_ dan navigasi multi halaman.
+Aplikasi ini menerapkan fitur _Create_, _Read_, _Delete_, serta nilai tambah berupa _Update_ dan navigasi multi halaman.
 
 ## Fitur Aplikasi
 
@@ -26,11 +26,13 @@ Di fitur ini, pengguna bisa menambahkan produk kosmetik dengan mengisi nama prod
 
 Produk akan ditampilkan dalam bentuk daftar. Setiap item menampilkan nama produk, kategori, dan harga. Di bagian kiri terdapat checkbox untuk menandai status produk, serta tombol edit dan hapus di sisi kanan.
 
+Jika produk sudah dicentang, maka warna nama produk akan berubah menjadi pink sebagai penanda bahwa produk tersebut sudah ditandai.
+
 ╰┈➤ Hapus Produk (_Delete_)
 
 Di bagian ini, pengguna bisa menghapus produk yang sudah tidak dipakai atau sudah habis. Tinggal tekan tombol hapus di item produk, lalu produk akan langsung hilang dari daftar.
 
----
+
 
 **🌟 Nilai Tambah**
 
@@ -40,26 +42,26 @@ Jika ada data yang salah input (misalnya nama atau harga), pengguna bisa edit pr
 
 ╰┈➤ Navigasi Multi Halaman
 
-Aplikasi ini memakai navigasi supaya tampilan lebih rapi. Jadi, halaman daftar produk dipisah dengan halaman form tambah/edit produk. Pengguna bisa pindah halaman dengan tombol yang disediakan, lalu kembali lagi ke halaman daftar setelah selesai.
+Aplikasi ini menggunakan navigasi agar tampilan lebih rapi dan mudah digunakan. Halaman daftar produk dipisahkan dengan halaman form tambah atau edit produk.
 
----
+Jadi, pengguna dapat berpindah halaman saat ingin menambah atau mengedit data, lalu kembali lagi ke halaman daftar setelah selesai.
 
 ## Widget yang Digunakan
 
 | **WIDGET** | **KETERANGAN** |
 |--------|------------|
 | StatelessWidget | Digunakan untuk struktur dasar aplikasi yang tidak membutuhkan perubahan state. |
-| StatefulWidget | Digunakan untuk halaman utama karena aplikasi ini membutuhkan perubahan data (seperti tambah, edit, dan hapus produk). |
-| Scaffold | Digunakan sebagai kerangka utama halaman, yang berisi AppBar dan body. |
+| StatefulWidget | Digunakan pada HomePage dan FormPage karena halaman ini membutuhkan perubahan data (tambah, edit, hapus, centang produk). |
+| Scaffold | Menyediakan struktur dasar seperti AppBar, body, dan FloatingActionButton. |
 | AppBar | Digunakan untuk menampilkan judul aplikasi di bagian atas layar. |
 | Text | Digunakan untuk menampilkan informasi seperti nama produk, kategori, dan harga. |
-| TextField | Digunakan pada form input untuk memasukkan data produk. |
+| TextField | Menggunakan controller untuk mengambil dan mengelola input pengguna. |
 | ElevatedButton | Digunakan sebagai tombol aksi seperti tambah produk atau simpan data. |
 | ListView | Digunakan untuk menampilkan daftar produk secara dinamis. |
 | ListTile | Digunakan untuk menyusun isi setiap item produk agar lebih rapi dan terstruktur. |
 | Card / Container | Digunakan untuk membungkus setiap produk dalam bentuk box agar tampil lebih clean dan terpisah. |
 | Column & Row | Digunakan untuk mengatur tata letak widget secara vertikal dan horizontal. |
-| Checkbox | Digunakan untuk menandai status produk, misalnya sudah dibeli atau belum. |
+| Checkbox | Digunakan untuk menandai status produk, misalnya sudah tersedia atau belum. |
 | IconButton | Digunakan sebagai tombol edit dan hapus pada setiap produk. |
-| Navigator | Digunakan untuk berpindah antar halaman, seperti dari halaman daftar produk ke halaman tambah atau edit produk. |
-| setState() | Digunakan untuk memperbarui tampilan ketika data berubah, misalnya setelah menambah atau menghapus produk. |
+| Navigator | Digunakan bersama MaterialPageRoute untuk berpindah halaman dan mengirim data kembali ke halaman sebelumnya. |
+| setState() | Digunakan untuk memperbarui tampilan ketika data berubah, misalnya setelah menambah, mengupdate atau menghapus produk. |
