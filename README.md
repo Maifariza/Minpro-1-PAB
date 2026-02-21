@@ -2,6 +2,10 @@
 
 <p align="center"><em>Organize your beauty. Elevate your glow.</em></p>
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4995b0e5-0e61-47c6-86ad-79eafdb80047" width="75%">
+</p>
+
 ## Disusun Oleh 
 
 | **Nama**                     | **NIM**     | **Kelas**            |
