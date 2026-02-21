@@ -12,7 +12,7 @@
 
 **GlowUp** adalah aplikasi mobile berbasis Flutter yang dibuat untuk membantu mencatat dan mengatur produk kosmetik dalam bentuk _checklist_.
 
-Di aplikasi ini, pengguna bisa menambahkan produk kosmetik yang dimiliki, lalu menandainya dengan _checkbox_ untuk menunjukkan apakah produk tersebut masih tersedia atau sudah habis. Jadi bukan cuma daftar biasa, tapi benar-benar bisa dipantau statusnya. Selain itu, pengguna juga bisa mengedit data produk kalau ada yang salah atau ingin diperbarui, serta menghapus produk yang sudah tidak dipakai.
+Di aplikasi ini, pengguna bisa menambahkan produk kosmetik yang dimiliki, lalu menandainya dengan _checkbox_ untuk menunjukkan apakah produk tersebut masih ada atau tidak. Jadi bukan cuma daftar biasa, tapi benar-benar bisa dipantau statusnya. Selain itu, pengguna juga bisa mengedit data produk kalau ada yang salah atau ingin diperbarui, serta menghapus produk yang sudah tidak dipakai.
 
 Aplikasi ini dibuat dengan menerapkan fitur _Create_, _Read_, _Delete_, serta nilai tambah berupa _Update_ dan navigasi multi halaman.
 
