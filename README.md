@@ -93,7 +93,7 @@ Aplikasi ini menggunakan navigasi agar tampilan lebih rapi dan mudah digunakan. 
 
 ---
 
-## Tampilan Aplikasi
+## ⋆˚꩜｡ Tampilan Aplikasi 
 
 - **Halaman Daftar Produk (Home)**
 
