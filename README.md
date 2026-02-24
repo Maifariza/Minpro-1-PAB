@@ -76,7 +76,7 @@ Jadi, pengguna dapat berpindah halaman saat ingin menambah atau mengedit data, l
 
 ## Alur Aplikasi
 
-Aplikasi GlowUp ini dipakai untuk mengelola daftar produk kecantikan. Di dalamnya, kamu bisa melihat daftar produk, menambah produk baru, mengedit produk, menghapus produk, dan menandai produk dengan checkbox.
+Aplikasi GlowUp ini dipakai untuk mengelola daftar produk kecantikan. Di dalamnya, pengguna bisa melihat daftar produk, menambah produk baru, mengedit produk, menghapus produk, dan menandai produk dengan checkbox.
 
 1. Membuka aplikasi & melihat daftar produk
 
