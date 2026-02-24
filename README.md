@@ -73,3 +73,9 @@ Jadi, pengguna dapat berpindah halaman saat ingin menambah atau mengedit data, l
 | FloatingActionButton | Digunakan sebagai tombol aksi utama untuk menambahkan produk baru ke dalam daftar. |
 | SnackBar | Digunakan untuk menampilkan notifikasi sementara kepada pengguna, misalnya ketika produk berhasil dihapus. |
 | ScaffoldMessenger | Digunakan untuk menampilkan SnackBar dan mengelola pesan notifikasi pada halaman aplikasi. |
+
+## Alur Aplikasi
+
+Aplikasi GlowUp ini dipakai untuk mengelola daftar produk kecantikan. Di dalamnya, kamu bisa melihat daftar produk, menambah produk baru, mengedit produk, menghapus produk, dan menandai produk dengan checkbox.
+
+1. Membuka aplikasi & melihat daftar produk
