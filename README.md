@@ -79,3 +79,5 @@ Jadi, pengguna dapat berpindah halaman saat ingin menambah atau mengedit data, l
 Aplikasi GlowUp ini dipakai untuk mengelola daftar produk kecantikan. Di dalamnya, kamu bisa melihat daftar produk, menambah produk baru, mengedit produk, menghapus produk, dan menandai produk dengan checkbox.
 
 1. Membuka aplikasi & melihat daftar produk
+
+   Saat aplikasi dijalankan, pengguna akan langsung masuk ke halaman utama yang menampilkan daftar produk **GlowUp** yang sudah tersedia. Produk ditampilkan dalam bentuk list, yang berisi nama produk, kategori, dan harga. Jika jumlah produk cukup banyak, pengguna bisa scroll layar kebawah untuk melihat item lainnya. Tampilan ini menjadi pusat utama pengelolaan data karena semua produk yang ditambahkan, diedit, atau dihapus akan muncul dan diperbarui di halaman ini.
