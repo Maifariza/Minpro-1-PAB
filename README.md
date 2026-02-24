@@ -20,37 +20,54 @@ Di aplikasi ini, pengguna bisa menambahkan produk kosmetik yang dimiliki, lalu m
 
 Aplikasi ini menerapkan fitur _Create_, _Read_, _Delete_, serta nilai tambah berupa _Update_ dan navigasi multi halaman.
 
+---
+
+## Struktur Folder & File Project
+
+
+Struktur program ini mengikuti standar project Flutter seperti biasanya. Folder seperti android, ios, web, linux, macos, dan windows itu adalah folder bawaan dari Flutter untuk mendukung berbagai platform. Jadi di bagian itu saya tidak melakukan perubahan khusus, karena fungsinya memang untuk konfigurasi sistem sesuai platform yang digunakan.
+
+Bagian yang benar-benar saya gunakan ada di dalam folder lib, karena di sanalah semua kode utama aplikasi saya tulis. File main.dart menjadi titik awal aplikasi dijalankan. Dari file ini, saya mengatur tampilan awal aplikasi, menampilkan halaman daftar produk, serta mengatur navigasi ke halaman tambah dan edit produk. Semua logika seperti menambah, mengedit, menghapus, dan mengubah status checkbox juga saya atur di bagian ini.
+
+Selain itu, saya juga menggunakan folder assets, khususnya pada bagian fonts, untuk menyimpan font tambahan yang digunakan agar tampilan aplikasi terlihat lebih menarik dan sesuai dengan tema GlowUp. Font tersebut kemudian saya daftarkan di file pubspec.yaml supaya bisa digunakan di dalam aplikasi.
+
+File pubspec.yaml sendiri saya gunakan untuk mengatur dependency serta mendaftarkan aset seperti font yang dipakai. Sedangkan file README.md saya gunakan untuk menuliskan dokumentasi project, mulai dari penjelasan fitur, alur aplikasi, widget yang digunakan, sampai hasil tampilan aplikasinya.
+
+> <img width="181" height="525" alt="Screenshot 2026-02-24 230756" src="https://github.com/user-attachments/assets/60fd7a96-e5c8-4dd4-9624-b39749af4452" />
+
+---
+
 ## Fitur Aplikasi
 
 ╰┈➤ Tambah Produk (_Create_)
 
-Di fitur ini, pengguna bisa menambahkan produk kosmetik dengan mengisi nama produk, kategori, dan harga. Setelah tombol tambah ditekan, produk langsung muncul di daftar.
+Aplikasi menyediakan fitur untuk menambahkan data produk baru ke dalam sistem. Pengguna dapat menginput nama produk, kategori, dan harga melalui halaman form. Data yang berhasil disimpan akan langsung masuk ke dalam daftar produk dan tersimpan di dalam state aplikasi.
 
 ╰┈➤ Tampilkan Daftar Produk (_Read_)
 
-Produk akan ditampilkan dalam bentuk daftar. Setiap item menampilkan nama produk, kategori, dan harga. Di bagian kiri terdapat checkbox untuk menandai status produk, serta tombol edit dan hapus di sisi kanan.
-
-Jika produk sudah dicentang, maka warna nama produk akan berubah menjadi pink sebagai penanda bahwa produk tersebut sudah ditandai.
+Aplikasi mampu menampilkan seluruh data produk dalam bentuk daftar yang terstruktur. Setiap item menampilkan informasi utama berupa nama produk, kategori, dan harga. Tampilan daftar ini akan selalu diperbarui secara otomatis setiap kali terjadi perubahan data, seperti penambahan, pengeditan, atau penghapusan produk.
 
 ╰┈➤ Hapus Produk (_Delete_)
 
-Di bagian ini, pengguna bisa menghapus produk yang sudah tidak dipakai atau sudah habis. Tinggal tekan tombol hapus di item produk, lalu produk akan langsung hilang dari daftar.
+Aplikasi memungkinkan pengguna untuk menghapus data produk dari daftar. Ketika fitur ini digunakan, sistem akan menghapus data dari state dan memperbarui tampilan daftar secara langsung. Sebagai konfirmasi, aplikasi juga menampilkan notifikasi singkat bahwa proses penghapusan berhasil dilakukan.
 
+╰┈➤ Tandai Status Produk (_Checkbox_)
 
+Setiap produk dilengkapi dengan checkbox yang berfungsi sebagai penanda status. Saat checkbox diaktifkan, tampilan produk akan berubah warna sebagai indikator visual bahwa produk telah ditandai.
 
 **🌟 Nilai Tambah**
 
 ╰┈➤ Edit Produk (_Update_)
 
-Jika ada data yang salah input (misalnya nama atau harga), pengguna bisa edit produk tersebut. Setelah tombol edit ditekan, data produk bisa diperbarui dan hasilnya langsung tampil di daftar.
+Aplikasi menyediakan fitur untuk memperbarui data produk yang sudah ada. Data yang ingin diubah akan ditampilkan kembali dalam bentuk form dengan isi sebelumnya, sehingga pengguna dapat melakukan perubahan tanpa perlu menginput ulang dari awal. Setelah diperbarui, sistem akan langsung menampilkan data terbaru pada daftar produk.
 
 ╰┈➤ Navigasi Multi Halaman
 
-Aplikasi ini menggunakan navigasi agar tampilan lebih rapi dan mudah digunakan. Halaman daftar produk dipisahkan dengan halaman form tambah atau edit produk.
+Aplikasi ini menggunakan navigasi agar tampilan lebih rapi dan mudah digunakan. Halaman daftar produk dipisahkan dengan halaman form tambah atau edit produk. Jadi, pengguna dapat berpindah halaman saat ingin menambah atau mengedit data, lalu kembali lagi ke halaman daftar setelah selesai.
 
-Jadi, pengguna dapat berpindah halaman saat ingin menambah atau mengedit data, lalu kembali lagi ke halaman daftar setelah selesai.
+---
 
-## Widget yang Digunakan
+## Widget dan Komponen yang Digunakan
 
 | **WIDGET** | **KETERANGAN** |
 |--------|------------|
@@ -74,6 +91,37 @@ Jadi, pengguna dapat berpindah halaman saat ingin menambah atau mengedit data, l
 | SnackBar | Digunakan untuk menampilkan notifikasi sementara kepada pengguna, misalnya ketika produk berhasil dihapus. |
 | ScaffoldMessenger | Digunakan untuk menampilkan SnackBar dan mengelola pesan notifikasi pada halaman aplikasi. |
 
+---
+
+## Tampilan Aplikasi
+
+- **Halaman Daftar Produk (Home)**
+
+  <img width="1919" height="1030" alt="Screenshot 2026-02-24 143537" src="https://github.com/user-attachments/assets/0e27c498-fdde-4abd-9267-82337f6b1c3e" />
+
+
+- Halaman Tambah Produk
+
+  <img width="1919" height="946" alt="image" src="https://github.com/user-attachments/assets/75716031-06d7-473c-8581-68575f7f218d" />
+
+
+- Halaman Edit Produk
+
+  <img width="1919" height="940" alt="image" src="https://github.com/user-attachments/assets/bedf7536-87d7-493d-9ee4-c83699d7a497" />
+
+
+- Notifikasi SnackBar
+
+  <img width="1919" height="948" alt="Screenshot 2026-02-24 145747" src="https://github.com/user-attachments/assets/06d9fe6b-71a8-4015-a5a1-c22299a3662e" />
+
+
+- Checkbox (produk dicentang)
+
+  <img width="1919" height="944" alt="Screenshot 2026-02-24 150005" src="https://github.com/user-attachments/assets/a7d20d10-f546-4a8c-b2a3-3f252893e3f9" />
+
+
+---
+
 ## Alur Aplikasi
 
 Aplikasi GlowUp ini dipakai untuk mengelola daftar produk kecantikan. Di dalamnya, pengguna bisa melihat daftar produk, menambah produk baru, mengedit produk, menghapus produk, dan menandai produk dengan checkbox.
@@ -94,9 +142,7 @@ Aplikasi GlowUp ini dipakai untuk mengelola daftar produk kecantikan. Di dalamny
 
    <img width="1919" height="1029" alt="Screenshot 2026-02-24 143721" src="https://github.com/user-attachments/assets/351ebb89-483e-4185-99fe-a0bdc81dd2b9" />
 
-   Setelah tombol tersebut ditekan, aplikasi akan membuka halaman form. Di halaman ini, pengguna diminta untuk mengisi nama produk, kategori, dan harga. Semua data harus diisi sesuai dengan produk yang ingin ditambahkan.
-
-   Nah di sini saya mencoba menambahkan produk Cleansing Oil. Saya memasukkan nama produknya, memilih kategorinya, lalu mengisi harga sesuai yang diinginkan.
+   Setelah tombol tersebut ditekan, aplikasi akan membuka halaman form. Di halaman ini, pengguna diminta untuk mengisi nama produk, kategori, dan harga. Semua data harus diisi sesuai dengan produk yang ingin ditambahkan. Nah di sini saya mencoba menambahkan produk Cleansing Oil. Saya memasukkan nama produknya, memilih kategorinya, lalu mengisi harga sesuai yang diinginkan.
 
    <img width="1919" height="937" alt="image" src="https://github.com/user-attachments/assets/5deb615f-f086-4a63-99e0-ce4219070391" />
 
